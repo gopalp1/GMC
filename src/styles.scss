@@ -7,9 +7,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 :root {
-    --primary-color: #D11243;
-    --secondary-color: #000000;
-    $text-color: #333333;
-    $background-color: #124076;
-    --hover-color: #ff5733;
-  }
+  --color-variant1: #124076;
+  --color-variant2: #22c55e;
+  --color-variant3: #7F9F80;
+  --color-variant4:#FFC374 ;
+  --color-card-background: #028391;
+  --color-card-border: #028391;
+  --color-text: #F6DCAC;
+  --color-button-background: #F6DCAC;
+  --color-button-text: #01204E;
+  --color-shadow: #01204E;
+--color-left-background:#8CA1A5
+}
