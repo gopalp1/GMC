@@ -1,0 +1,9 @@
+.header-scroll {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow to the header when it becomes sticky */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  

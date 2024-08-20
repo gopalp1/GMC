@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body { height: 100%; box-sizing: border-box;  margin: 0; padding: 0; scroll-behavior: smooth; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+:root {
+    --primary-color: #D11243;
+    --secondary-color: #000000;
+    $text-color: #333333;
+    $background-color: #124076;
+    --hover-color: #ff5733;
+  }

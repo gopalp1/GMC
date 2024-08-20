@@ -1,0 +1,17 @@
+<app-banner title="About Us" ></app-banner>
+<div class="container mx-auto px-6 py-12">
+  <div class="flex flex-col lg:flex-row items-stretch" data-aos="fade-up">
+    
+    <!-- Left Section with Image -->
+    <div class="lg:w-2/6 w-full mb-8 lg:mb-0 flex-shrink-0">
+      <img src="../../../assets/images/aboutus.jpg" alt="Team image" class="rounded-lg w-full h-full object-cover">
+    </div>
+    
+    <!-- Right Section with Text Content -->
+    <div class="lg:w-4/6 w-full lg:pl-12 flex items-center text-xl">
+      <ul class="list-disc space-y-4 pl-5 text-lg leading-relaxed">
+        <li *ngFor="let text of about">{{text?.point}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
