@@ -2,30 +2,23 @@
   <div class="flex h-[80px] justify-between items-center gap-10 mx-4"  >
     <img src="../../../assets/images/logo.png" alt="" class="max-w-[150px] bg-blend-darken" routerLink="home">
    
-    <div class="flex justify-between gap-12">
+    <div class="flex justify-between gap-12"  >
       <!-- Navigation Links -->
-      <a class="relative hidden lg:flex items-center font-medium transition duration-300 group" routerLink="Home">
-        <mat-icon class="mr-2">home</mat-icon>
-        Home
-        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+     <div class="group" *ngFor="let item of navigation">
+      <a 
+      [routerLink]="item.routerLink"
+      routerLinkActive="{{item.activeLinkClass}}"
+      [ngClass]="item.class">
+        <mat-icon class="mr-2">{{item.icon}}</mat-icon>
+        {{item.text}}
       </a>
-      <a class="relative hidden lg:flex items-center font-medium" routerLink="about-us">
-        <mat-icon class="mr-2">info</mat-icon>
-        <span>About us</span>
-        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#D11243] transition-all duration-300 ease-out hover:w-full"></span>
-      </a>
-      <a class="relative hidden lg:flex items-center font-medium" routerLink="services">
-        <mat-icon class="mr-2">build</mat-icon>
-        <span>Services</span>
-        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#D11243] transition-all duration-300 ease-out hover:w-full"></span>
-      </a>
-      <a class="relative hidden lg:flex items-center font-medium" routerLink="contact-us">
-        <mat-icon class="mr-2">contact_mail</mat-icon>
-        <span>Contact us</span>
-        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#D11243] transition-all duration-300 ease-out hover:w-full"></span>
-      </a>
+      <div class="bg-green-500 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
+      <div ></div>
+     </div>
       
       <!-- Hamburger Icon -->
+       <div class="
+       "></div>
       <div class="lg:hidden flex items-center">
         <button (click)="menuOpen = !menuOpen">
           <mat-icon>{{ menuOpen ? 'close' : 'menu' }}</mat-icon>
@@ -35,22 +28,16 @@
   </div>
   <!-- Mobile Menu -->
   <div *ngIf="menuOpen" class="flex flex-col lg:hidden  p-4 z-50 ">
-    <a class="flex items-center hover:text-[#D11243] mt-2 gap-8 p-2 font-medium"  routerLink="Home">
-      <mat-icon class="mr-2">home</mat-icon>
-      Home
-    </a>
-    <a class="flex items-center hover:text-[#D11243] mt-2 gap-8 p-2 font-medium"  routerLink="about-us">
-      <mat-icon class="mr-2">info</mat-icon>
-      About us
-    </a>
-    <a class="flex items-center hover:text-[#D11243] mt-2 gap-8 p-2 font-medium"  routerLink="services">
-      <mat-icon class="mr-2">build</mat-icon>
-      Services
-    </a>
-    <a class="flex items-center hover:text-[#D11243] mt-2 gap-8 p-2 font-medium"  routerLink="contact-us">
-      <mat-icon class="mr-2">contact_mail</mat-icon>
-      Contact us
-    </a>
+    <div *ngFor="let item of navigation">
+      <a 
+      [routerLink]="item.routerLink"
+      routerLinkActive="{{item.activeLinkClass}}"
+      (click)="closeMenu()"
+      class="flex items-center  mt-2 gap-8 p-2 font-medium">
+        <mat-icon class="mr-2">{{item.icon}}</mat-icon>
+        {{item.text}}
+      </a>
+     </div>
   </div>
 </header>
 

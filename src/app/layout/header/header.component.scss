@@ -3,7 +3,14 @@
     top: 0;
     background-color: white;
     color: black;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow to the header when it becomes sticky */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     transition: background-color 0.3s ease, color 0.3s ease;
   }
-  
+  a.active-link {
+    font-weight: bold;
+    border-bottom: 3px solid #22c55e ;
+    outline-offset: 15px;
+  }
+  a:hover{
+    font-weight: bold;
+  }

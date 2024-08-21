@@ -1,17 +1,25 @@
 <div class="" >
   <div 
-    class="lg:min-h-[600px] min-h-[300px]  max-w-full relative flex justify-center" 
-    style="background-color: var(--color-variant1);"
-    data-aos="fade-down" 
+    class="lg:min-h-[600px] min-h-[300px]  max-w-full relative flex justify-end" 
+    style="background-color: var(--bg-variant1);"
    >
-    <img src="{{ img }}" alt="" class="absolute lg:w-[100%] lg:max-h-[600px]" />
+    <img src="{{ img }}" alt="" class="absolute  lg:max-h-[400px] max-h-[200px]"  />
+    <div class="absolute left-12  top-[25%]" >
+      <h1 class=" lg:text-8xl text-4xl font-semibold " style="color: var(--color-variant2);" data-aos="fade-down" data-aos-delay="1000">
+        GMC Automation <br>
+        and Solutions
+      </h1>
+      <span class=" lg:text-5xl text-2xl text-white"  data-aos="fade-down" data-aos-delay="2000">Industrial Electronic services</span>
+    </div>
   </div>
-  <div class="py-4  h-full px-10 bg-[url('assets/images/bg.png')] bg-[#7F9F80] pt-8" >
-    <h1 class="text-center lg:text-6xl text-4xl font-medium ">
-      What <span class="text-green-500">We Offer</span>
+  <div class="py-4  h-full px-10 bg-[url('assets/images/bg.png')]  pt-8" style="background-color: var(--bg-variant3);">
+    <h1 class="text-center lg:text-6xl text-4xl font-medium " style="color: var(--color-variant1);">
+      What <span style="color: var(--color-variant2);">We Offer</span>
     </h1>
     <div class="grid grid-cols-1 lg:grid-cols-2  gap-4 my-8"  data-aos="fade-up" >
-      <div class="flex lg:flex-row flex-col items-center  md:gap-10 gap-3 bg-[#FFC374] p-3 rounded-md " *ngFor="let item of offer">
+      <div class="flex lg:flex-row flex-col items-center  md:gap-10 gap-3  p-3 rounded-md "
+      style="background-color: var(--bg-variant4);"
+      *ngFor="let item of offer">
         <img src="{{item.img}}" alt="" class="rounded-full w-36 h-36 " />
         <div class="">
                 <h1 class="font-medium lg:text-3xl text-2xl  md:text-start text-center text-green-700">{{item?.title}}</h1>
@@ -20,16 +28,30 @@
       </div>
     </div>
   </div>
-  <div class="px-10 pt-8" data-aos="fade-up" >
-    <h1 class="text-center text-4xl md:text-6xl font-medium" >
-      Leading <span class="text-green-500">We repair</span>
-    </h1>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 my-10 mx-auto">
-      <div class="w-full transition-transform transform hover:scale-105" *ngFor="let item of leading">
-        <div class="border-4 border-green-500 rounded-md overflow-hidden">
-          <img class="w-full h-32 " src="{{item?.img}}" alt="leading img">
+  <div class="relative">
+    <!-- Background Image and Gradient -->
+    <div class="absolute inset-0 bg-white">
+      <!-- Bottom Right Image with Rotation -->
+      <img src="assets/images/bg2.png" 
+           alt="Background Image" 
+           class="absolute bottom-0 right-0 w-[50%] opacity-90 rotate-image">
+    </div>
+    
+    <!-- Content -->
+    <div class="relative px-10 pt-8" data-aos="fade-up">
+      <h1 class="text-center text-4xl md:text-6xl font-medium" style="color: var(--color-variant1);">
+        Leading <span style="color: var(--color-variant2);">We repair</span>
+      </h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10 mx-auto">
+        <div class="w-full transition-transform transform hover:scale-105" *ngFor="let item of leading">
+          <div class="border-4 rounded-md overflow-hidden" style="border:3px solid var(--color-variant2);">
+            <img class="w-full h-32" src="{{item?.img}}" alt="leading img">
+          </div>
         </div>
       </div>
     </div>
   </div>
+  
+  
+  
 </div>

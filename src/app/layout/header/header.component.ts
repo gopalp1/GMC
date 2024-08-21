@@ -17,4 +17,43 @@ export class HeaderComponent {
       header?.classList.remove('header-scroll');
     }
   }
+
+  navigation = [
+    {
+      text: "Home",
+      icon: "home",
+      routerLink: "Home",
+      routerLinkActiveOptions: { exact: true },
+      class: "relative hidden lg:flex items-center font-medium ",
+      activeLinkClass: "active-link",
+ 
+    },
+    {
+      text: "About us",
+      icon: "info",
+      routerLink: "about-us",
+      class: "relative hidden lg:flex items-center font-medium",
+      activeLinkClass: "active-link",
+     
+    },
+    {
+      text: "Services",
+      icon: "build",
+      routerLink: "services",
+      class: "relative hidden lg:flex items-center font-medium",
+      activeLinkClass: "active-link",
+     
+    },
+    {
+      text: "Contact us",
+      icon: "contact_mail",
+      routerLink: "contact-us",
+      class: "relative hidden lg:flex items-center font-medium",
+      activeLinkClass: "active-link",
+     
+    }
+  ];
+  closeMenu(){
+    this.menuOpen =false
+  }
 }
