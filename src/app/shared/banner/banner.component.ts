@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent {
-  img:any="../../../assets/images/map.png";
+  img:any="./assets/images/map.png";
   @Input() title: string = '';
 }
